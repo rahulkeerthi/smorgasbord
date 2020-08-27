@@ -1,2 +1,15 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Listings</h1>
+<div class="cards">
+  <% @listings.each do |listing| %>
+    <%= link_to listing_path(listing) do %>
+      <div class="card-product">
+        <%= image_tag listing.picture %>
+        <div class="card-product-infos">
+          <h2><%= listing.address %></h2>
+          <p><%= listing.home_type %></p>
+          <p>$<%= listing.price %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

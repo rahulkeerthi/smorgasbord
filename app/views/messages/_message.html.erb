@@ -1,0 +1,9 @@
+<div class="message <%= "right" if user_is_messages_author %>" id="message-<%= message.id %>" >
+  <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar" %>
+  <div class="message-content">
+    <%= message.content %>
+  </div>
+  <div>
+    <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+  </div>
+</div>

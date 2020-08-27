@@ -1,0 +1,6 @@
+<h1><%= @listing.address %></h1>
+<p><%= @listing.home_type %></p>
+<p>$<%= @listing.price %></p>
+<%= link_to 'Chat with owner', chat_room_path(@chatroom) %>
+<hr>
+<%= link_to 'back', root_path %>
